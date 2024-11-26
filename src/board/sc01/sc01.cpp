@@ -10,7 +10,7 @@
 using namespace lgfx::v1;
 
 #define PanelLan_SCREEN_WIDTH 320
-#define PanelLan_SCREEN_HIGHT 480
+#define PanelLan_SCREEN_HEIGHT 480
 #define PanelLan_SCREEN_BK_FREQ 12000
 
 Panel_Device* panel_load_from_sc01(board_pins_t* pins) {
@@ -52,7 +52,7 @@ Panel_Device* panel_load_from_sc01(board_pins_t* pins) {
     auto _touch_instance = new Touch_FT5x06();
     auto cfg             = _touch_instance->config();
     cfg.x_max            = PanelLan_SCREEN_WIDTH - 1;
-    cfg.y_max            = PanelLan_SCREEN_HIGHT - 1;
+    cfg.y_max            = PanelLan_SCREEN_HEIGHT - 1;
     cfg.bus_shared       = false;
     cfg.offset_rotation  = 0;
 

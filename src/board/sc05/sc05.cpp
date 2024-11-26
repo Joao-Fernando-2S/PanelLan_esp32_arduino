@@ -1,18 +1,15 @@
-#include "sdkconfig.h"
-
-#ifdef CONFIG_IDF_TARGET_ESP32S3
-
-#include <driver/i2c.h>
-#include <LovyanGFX.hpp>
-#include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
-#include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
-#include "../boards.h"
+// #include "sdkconfig.h"
+// #include <driver/i2c.h>
+// #include <LovyanGFX.hpp>
+// #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
+// #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
+// #include "../boards.h"
 #include "sc05_pin.h"
 
 using namespace lgfx::v1;
 
 #define PanelLan_SCREEN_WIDTH 800
-#define PanelLan_SCREEN_HIGHT 480
+#define PanelLan_SCREEN_HEIGHT 480
 
 #define PanelLan_SCREEN_BK_FREQ     22222
 
@@ -89,8 +86,8 @@ Panel_Device* panel_load_from_sc05(board_pins_t* pins) {
 
     cfg.memory_width  = PanelLan_SCREEN_WIDTH;
     cfg.panel_width   = PanelLan_SCREEN_WIDTH;
-    cfg.memory_height = PanelLan_SCREEN_HIGHT;
-    cfg.panel_height  = PanelLan_SCREEN_HIGHT;
+    cfg.memory_height = PanelLan_SCREEN_HEIGHT;
+    cfg.panel_height  = PanelLan_SCREEN_HEIGHT;
 
     cfg.offset_x = 0;
     cfg.offset_y = 0;
@@ -105,7 +102,7 @@ Panel_Device* panel_load_from_sc05(board_pins_t* pins) {
     cfg.x_min            = 0;
     cfg.x_max            = PanelLan_SCREEN_WIDTH;
     cfg.y_min            = 0;
-    cfg.y_max            = PanelLan_SCREEN_HIGHT;
+    cfg.y_max            = PanelLan_SCREEN_HEIGHT;
     cfg.bus_shared       = false;
     cfg.offset_rotation  = 0;
 
@@ -141,5 +138,3 @@ Panel_Device* panel_load_from_sc05(board_pins_t* pins) {
 
   return panle;
 }
-
-#endif

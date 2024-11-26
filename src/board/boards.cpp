@@ -21,16 +21,15 @@ PanelLan::PanelLan(panelLan_board_t board) {
 bool PanelLan::init_impl(bool use_reset, bool use_clear) {
   Panel_Device* panel = nullptr;
   switch (_board) {
-#ifdef CONFIG_IDF_TARGET_ESP32
+
     case BOARD_SC01: panel = panel_load_from_sc01(&pins); break;
-#elif CONFIG_IDF_TARGET_ESP32S3
     case BOARD_SC01_PLUS: panel = panel_load_from_sc01_plus(&pins); break;
     case BOARD_SC02: panel = panel_load_from_sc02(&pins); break;
     case BOARD_SC05: panel = panel_load_from_sc05(&pins); break;
     case BOARD_KC01: panel = panel_load_from_kc01(&pins); break;
     case BOARD_BC02: panel = panel_load_from_bc02(&pins); break;
     case BOARD_SC07: panel = panel_load_from_sc07(&pins); break;
-#endif
+
     default: break;
   }
 

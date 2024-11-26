@@ -11,7 +11,7 @@
 using namespace lgfx::v1;
 
 #define PanelLan_SCREEN_WIDTH 480
-#define PanelLan_SCREEN_HIGHT 272
+#define PanelLan_SCREEN_HEIGHT 272
 
 #define PanelLan_SCREEN_BK_FREQ     500
 
@@ -89,8 +89,8 @@ Panel_Device* panel_load_from_sc02(board_pins_t* pins) {
 
     cfg.memory_width  = PanelLan_SCREEN_WIDTH;
     cfg.panel_width   = PanelLan_SCREEN_WIDTH;
-    cfg.memory_height = PanelLan_SCREEN_HIGHT;
-    cfg.panel_height  = PanelLan_SCREEN_HIGHT;
+    cfg.memory_height = PanelLan_SCREEN_HEIGHT;
+    cfg.panel_height  = PanelLan_SCREEN_HEIGHT;
     cfg.offset_x = 0;
     cfg.offset_y = 0;
     panle->config(cfg);

@@ -117,8 +117,8 @@ Panel_Device* panel_load_from_bc02(board_pins_t* pins) {
 
     cfg.memory_width  = PanelLan_SCREEN_WIDTH;
     cfg.panel_width   = PanelLan_SCREEN_WIDTH;
-    cfg.memory_height = PanelLan_SCREEN_HIGHT;
-    cfg.panel_height  = PanelLan_SCREEN_HIGHT;
+    cfg.memory_height = PanelLan_SCREEN_HEIGHT;
+    cfg.panel_height  = PanelLan_SCREEN_HEIGHT;
 
     cfg.offset_x = 0;
     cfg.offset_y = 0;
@@ -132,7 +132,7 @@ Panel_Device* panel_load_from_bc02(board_pins_t* pins) {
     cfg.x_min      = 0;
     cfg.x_max      = PanelLan_SCREEN_WIDTH;
     cfg.y_min      = 0;
-    cfg.y_max      = PanelLan_SCREEN_HIGHT;
+    cfg.y_max      = PanelLan_SCREEN_HEIGHT;
     cfg.bus_shared = true;
     cfg.offset_rotation = 0;
 
